@@ -8,24 +8,31 @@ import {
 } from "@/components/ui/hover-card";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { IoIosHelpCircleOutline } from "react-icons/io";
 
 const GenreSelector = ({ seletedGenre, setSelectedGenre }) => {
   return (
     <div className="grid gap-2">
-      <HoverCard openDelay={200}>
-        <HoverCardTrigger asChild>
-          <Label htmlFor="genre">Genre</Label>
-        </HoverCardTrigger>
-        <HoverCardContent
-          align="start"
-          className="w-[260px] text-sm"
-          side="left"
-        >
-          Choose the genre of the music. The genre selection will guide the AI
-          to produce music in styles like Pop, Rock, Classical, Jazz, and more,
-          aligning with your creative vision.
-        </HoverCardContent>
-      </HoverCard>
+      <div className="flex flex-row gap-1 items-center">
+        <Label htmlFor="model">Genre</Label>
+        <HoverCard openDelay={200}>
+          <HoverCardTrigger asChild>
+            <div>
+              <IoIosHelpCircleOutline className="h-4 w-4 shrink-0 opacity-50" />
+            </div>
+          </HoverCardTrigger>
+          <HoverCardContent
+            align="start"
+            className="w-[260px] text-sm"
+            side="left"
+          >
+            Choose the genre of the music. The genre selection will guide the AI
+            to produce music in styles like Pop, Rock, Classical, Jazz, and
+            more, aligning with your creative vision.
+          </HoverCardContent>
+        </HoverCard>
+      </div>
+
       <Textarea
         placeholder="Enter a genre or a mix of genres (eg. Pop, Rock, Classical, Jazz, etc.)"
         className="min-h-[100px]"

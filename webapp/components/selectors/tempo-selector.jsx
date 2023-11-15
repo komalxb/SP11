@@ -8,28 +8,36 @@ import {
 } from "@/components/ui/hover-card";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
+import { IoIosHelpCircleOutline } from "react-icons/io";
 
 const TempoSelector = ({ selectedTempo, setSelectedTempo }) => {
   return (
     <div className="grid gap-2">
       <div className="flex flex-row justify-between items-center pb-1">
-        <HoverCard openDelay={200}>
-          <HoverCardTrigger asChild>
-            <Label htmlFor="tempo">Tempo</Label>
-          </HoverCardTrigger>
-          <HoverCardContent
-            align="start"
-            className="w-[260px] text-sm"
-            side="left"
-          >
-            Adjust the tempo, the speed or pace of the generated piece, measured
-            in beats per minute (BPM). This can range from slow and relaxed to
-            fast and energetic, influencing the overall feel of the music.
-          </HoverCardContent>
-          <span className="w-12 rounded-md border border-transparent px-2 py-0.5 text-right text-sm text-muted-foreground hover:border-border">
-            {selectedTempo}
-          </span>
-        </HoverCard>
+        <div className="flex flex-row gap-1 items-center">
+          <Label htmlFor="model">Tempo</Label>
+          <HoverCard openDelay={200}>
+            <HoverCardTrigger asChild>
+              <div>
+                <IoIosHelpCircleOutline className="h-4 w-4 shrink-0 opacity-50" />
+              </div>
+            </HoverCardTrigger>
+            <HoverCardContent
+              align="start"
+              className="w-[260px] text-sm"
+              side="left"
+            >
+              Adjust the tempo, the speed or pace of the generated piece,
+              measured in beats per minute (BPM). This can range from slow and
+              relaxed to fast and energetic, influencing the overall feel of the
+              music.
+            </HoverCardContent>
+          </HoverCard>
+        </div>
+
+        <span className="w-12 rounded-md border border-transparent px-2 py-0.5 text-right text-sm text-muted-foreground hover:border-border">
+          {selectedTempo}
+        </span>
       </div>
       <Slider
         id="tempo"

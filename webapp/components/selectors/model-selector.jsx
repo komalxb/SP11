@@ -26,6 +26,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { IoIosHelpCircleOutline } from "react-icons/io";
+
 import { musicModels } from "@/data/models";
 
 const ModelSelector = ({ selectedModel, setSelectedModel }) => {
@@ -34,19 +36,25 @@ const ModelSelector = ({ selectedModel, setSelectedModel }) => {
 
   return (
     <div className="grid gap-2">
-      <HoverCard openDelay={200}>
-        <HoverCardTrigger asChild>
-          <Label htmlFor="model">Model</Label>
-        </HoverCardTrigger>
-        <HoverCardContent
-          align="start"
-          className="w-[260px] text-sm"
-          side="left"
-        >
-          The model which will generate the completion. Some models are suitable
-          for natural language tasks, others specialize in code. Learn more.
-        </HoverCardContent>
-      </HoverCard>
+      <div className="flex flex-row gap-1 items-center">
+        <Label htmlFor="model">Model</Label>
+        <HoverCard openDelay={200}>
+          <HoverCardTrigger asChild>
+            <div>
+              <IoIosHelpCircleOutline className="h-4 w-4 shrink-0 opacity-50" />
+            </div>
+          </HoverCardTrigger>
+          <HoverCardContent
+            align="start"
+            className="w-[260px] text-sm"
+            side="left"
+          >
+            The model which will generate the completion. Some models are
+            suitable for natural language tasks, others specialize in code.
+            Learn more.
+          </HoverCardContent>
+        </HoverCard>
+      </div>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
@@ -60,10 +68,11 @@ const ModelSelector = ({ selectedModel, setSelectedModel }) => {
             <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent align="end" className="w-[250px] p-0">
+        <PopoverContent align="start" className="w-[250px] p-0">
           <HoverCard>
             <HoverCardContent
-              side="left"
+              side="right"
+              sideOffset={255}
               align="start"
               forceMount
               className="min-h-[280px]"
