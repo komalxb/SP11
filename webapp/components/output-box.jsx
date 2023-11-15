@@ -1,9 +1,11 @@
 import React from "react";
-
+import GeneratedMusicBox from "@/components/generated-music-box";
+import ChordBox from "@/components/chord-box";
 const OutputBox = () => {
   return (
-    <div className="flex flex-col gap-5 rounded-lg border-slate-400/25 p-10 border min-h-full">
-      <h1>OutputBox</h1>
+    <div className="flex flex-col gap-5 min-h-full min-w-full">
+      <GeneratedMusicBox />
+      <ChordBox />
     </div>
   );
 };

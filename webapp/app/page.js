@@ -24,12 +24,12 @@ export default function Home() {
         </div>
         <Separator />
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 p-5">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 p-5 gap-5 md:gap-0">
           <div className="col-span-1">
             <InputForm />
           </div>
-          <div className="sm:col-span-1 md:col-span-2 pl-5">
-            <div className="flex flex-col items-center min-h-full bg-blue-200">
+          <div className="sm:col-span-1 md:col-span-2 md:pl-5">
+            <div className="flex flex-col items-center min-h-full ">
               <OutputBox />
             </div>
           </div>

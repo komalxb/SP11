@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/hover-card";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { IoIosHelpCircleOutline } from "react-icons/io";
+import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 
 const GenreSelector = ({ seletedGenre, setSelectedGenre }) => {
   return (
@@ -18,7 +18,7 @@ const GenreSelector = ({ seletedGenre, setSelectedGenre }) => {
         <HoverCard openDelay={200}>
           <HoverCardTrigger asChild>
             <div>
-              <IoIosHelpCircleOutline className="h-4 w-4 shrink-0 opacity-50" />
+              <QuestionMarkCircledIcon className="h-4 w-4 shrink-0 opacity-50" />
             </div>
           </HoverCardTrigger>
           <HoverCardContent
@@ -35,7 +35,7 @@ const GenreSelector = ({ seletedGenre, setSelectedGenre }) => {
 
       <Textarea
         placeholder="Enter a genre or a mix of genres (eg. Pop, Rock, Classical, Jazz, etc.)"
-        className="min-h-[100px]"
+        className="min-h-[90px]"
         onChange={(e) => setSelectedGenre(e.target.value)}
       />
     </div>

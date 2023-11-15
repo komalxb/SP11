@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/hover-card";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
-import { IoIosHelpCircleOutline } from "react-icons/io";
+import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 
 const TempoSelector = ({ selectedTempo, setSelectedTempo }) => {
   return (
@@ -19,7 +19,7 @@ const TempoSelector = ({ selectedTempo, setSelectedTempo }) => {
           <HoverCard openDelay={200}>
             <HoverCardTrigger asChild>
               <div>
-                <IoIosHelpCircleOutline className="h-4 w-4 shrink-0 opacity-50" />
+                <QuestionMarkCircledIcon className="h-4 w-4 shrink-0 opacity-50" />
               </div>
             </HoverCardTrigger>
             <HoverCardContent

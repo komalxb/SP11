@@ -41,7 +41,7 @@ const InputForm = () => {
 
   return (
     <div className="flex flex-col gap-5 rounded-lg border-slate-400/25 p-10 border">
-      <h1>Inputs</h1>
+      <h1 className="font-semibold">Inputs</h1>
       <ModelSelector
         selectedModel={selectedModel}
         setSelectedModel={setSelectedModel}
@@ -70,6 +70,11 @@ const InputForm = () => {
         selectedTempo={selectedTempo}
         setSelectedTempo={setSelectedTempo}
       />
+
+      {/* SUBMIT BUTTON */}
+      <div className="flex flex-row justify-end pt-5">
+        <Button>Generate</Button>
+      </div>
     </div>
   );
 };

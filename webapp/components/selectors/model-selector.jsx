@@ -26,7 +26,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { IoIosHelpCircleOutline } from "react-icons/io";
+import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 
 import { musicModels } from "@/data/models";
 
@@ -41,7 +41,7 @@ const ModelSelector = ({ selectedModel, setSelectedModel }) => {
         <HoverCard openDelay={200}>
           <HoverCardTrigger asChild>
             <div>
-              <IoIosHelpCircleOutline className="h-4 w-4 shrink-0 opacity-50" />
+              <QuestionMarkCircledIcon className="h-4 w-4 shrink-0 opacity-50" />
             </div>
           </HoverCardTrigger>
           <HoverCardContent

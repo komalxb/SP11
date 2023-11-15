@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/hover-card";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { IoIosHelpCircleOutline } from "react-icons/io";
+import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 
 const MoodSelector = ({ selectedMood, setSelectedMood }) => {
   return (
@@ -18,7 +18,7 @@ const MoodSelector = ({ selectedMood, setSelectedMood }) => {
         <HoverCard openDelay={200}>
           <HoverCardTrigger asChild>
             <div>
-              <IoIosHelpCircleOutline className="h-4 w-4 shrink-0 opacity-50" />
+              <QuestionMarkCircledIcon className="h-4 w-4 shrink-0 opacity-50" />
             </div>
           </HoverCardTrigger>
           <HoverCardContent
@@ -35,7 +35,7 @@ const MoodSelector = ({ selectedMood, setSelectedMood }) => {
 
       <Textarea
         placeholder="Enter a mood or a mix of moods (eg. Happy, Energetic, Calm, Melancholic, etc.)"
-        className="min-h-[120px]"
+        className="min-h-[80px]"
         onChange={(e) => setSelectedMood(e.target.value)}
       />
     </div>
